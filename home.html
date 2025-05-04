@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Baisani Samara | AEM Developer</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      scroll-behavior: smooth;
+      position: relative;
+      overflow-x: hidden;
+      background: linear-gradient(-45deg, #dff1f9, #fef6e4, #c0f2ef, #fdf6ec);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      perspective: 1000px;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .bubble {
+      position: absolute;
+      bottom: -150px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      animation: rise 30s infinite linear;
+      pointer-events: none;
+    }
+
+    .bubble:nth-child(1) { left: 10%; width: 40px; height: 40px; animation-duration: 20s; }
+    .bubble:nth-child(2) { left: 25%; width: 60px; height: 60px; animation-duration: 25s; }
+    .bubble:nth-child(3) { left: 40%; width: 30px; height: 30px; animation-duration: 22s; }
+    .bubble:nth-child(4) { left: 60%; width: 50px; height: 50px; animation-duration: 28s; }
+    .bubble:nth-child(5) { left: 75%; width: 35px; height: 35px; animation-duration: 26s; }
+
+    @keyframes rise {
+      0% { transform: translateY(0); opacity: 0.6; }
+      100% { transform: translateY(-110vh); opacity: 0; }
+    }
+
+    header {
+      background: linear-gradient(to right, #84fab0, #8fd3f4);
+      color: #222;
+      padding: 50px 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transform-style: preserve-3d;
+    }
+
+    nav {
+      background: #ffdde1;
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    nav a {
+      color: #222;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #0077cc;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .project-card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      transform-style: preserve-3d;
+      transition: transform 0.6s ease, box-shadow 0.3s ease;
+      transform: rotateY(0deg);
+    }
+
+    .project-card:hover {
+      transform: rotateY(10deg) scale(1.03);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    footer {
+      background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+      color: #333;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-weight: bold;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1, h2, h3 {
+      color: #222;
+      transform: translateZ(20px);
+    }
+
+    a {
+      color: #0044cc;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Floating Bubbles for Background VFX -->
+<div class="bubble"></div>
+<div class="bubble"></div>
+<div class="bubble"></div>
+<div class="bubble"></div>
+<div class="bubble"></div>
+
+<header>
+  <h1>Baisani Samara</h1>
+  <p>AEM Developer | Java Engineer | Web Solutions Expert</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#resume">Resume</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I am a seasoned AEM Developer with 4.5 years of experience in software development and maintenance, including 3 years focused on Adobe Experience Manager. My core strengths include Java/J2EE, AEM Sites & Assets, OSGi development, and creating custom workflows. Currently pursuing my M.S. in Computer Engineering at California State University, Northridge.
+  </p>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="project-card">
+      <h3>Component-Based Development (Client: Cisco)</h3>
+      <ul>
+        <li>Built and managed AEM components, templates, content fragments, and workflows.</li>
+        <li>Developed backend services using servlets, schedulers, and OSGi bundles.</li>
+        <li>Integrated AEM with Adobe Experience Cloud (Target, Analytics, Campaign).</li>
+        <li>Modernized UI by converting Classic UI components to Touch UI.</li>
+      </ul>
+    </div>
+    <div class="project-card">
+      <h3>Digital Asset Management (Client: TLC)</h3>
+      <ul>
+        <li>Built and maintained AEM 6.4-based sites with custom dialogs, templates, and clientlibs.</li>
+        <li>Developed reusable assets library (photos, videos, PDFs) using DAM features.</li>
+        <li>Collaborated with business users, documented requirements, and updated JIRA tasks.</li>
+      </ul>
+    </div>
+    <div class="project-card">
+      <h3>Java Microservices (Internship)</h3>
+      <ul>
+        <li>Used Spring Boot to develop RESTful APIs for order and inventory services.</li>
+        <li>Applied Hibernate for ORM and implemented unit tests using JUnit and Mockito.</li>
+        <li>Collaborated via GitHub and helped migrate legacy monolith to microservices.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="resume">
+  <h2>Resume</h2>
+  <p>You can view or download my resume here:</p>
+  <a href="file:///C:/Users/sb236490/Documents/Resume-AEM%20DEVELOPER/Samara_resume.pdf" target="_blank" rel="noopener noreferrer">Samara_resume (PDF)</a>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p>Email: <a href="mailto:samarabaisani1923@gmail.com">samarabaisani1923@gmail.com</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/samarasimha-reddy-baisani-5987b52a8/" target="_blank">View My Profile</a></p>
+  <p>Phone: (818)-350-9722</p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Baisani Samara. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
